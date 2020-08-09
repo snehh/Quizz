@@ -1,0 +1,59 @@
+<link rel="stylesheet" href="/css/playstyles.css">
+
+<%- include ("./partials/menu") %>
+
+<div class="cont1">
+    <div class="playercard">
+        <div class="title"><%= quizz.title %></div>
+        <div class="tagsdiv">
+            Tags:
+            <% quizz.tags.forEach(tag => { %>
+                <span class="tagspan"><a href="/tag/<%= tag %>"><%= tag %></a></span>
+            <% }) %>
+        </div>
+        <span class="cb"><span class="col">Created By:</span><a href="/user/view/<%= quizz.createdBy %>"><%= quizz.createdBy %></a></span>
+        <span class="co"><span class="col">Created On:</span><%= quizz.createdOn %></span>
+        <!-- <%= quizz.title %><%= quizz.tags %><%= quizz.createdOn %><%= quizz.createdBy %> -->
+    
+    </div>
+</div>
+
+
+
+<div class="gamecont">
+    <form action="/quizzes/<%= quizz._id %>/results" method="POST">
+        <% quizz.questions.forEach((ques, index) => { %>
+            <div class="game-main">
+                <p><%= index+1 %>. <%= ques.q %></p>
+                <br><label class="radio-label" for="<%= index %>1">
+                    <input type="radio" onchange="op(this)" name="<%= index %>" id="<%= index %>1" value="<%= index %>1">
+                    <span></span><%= ques.a1 %>
+                </label>
+                <br><label class="radio-label" for="<%= index %>2">
+                    <input type="radio" onchange="op(this)"  name="<%= index %>" id="<%= index %>2" value="<%= index %>2">
+                    <span></span><%= ques.a2 %>
+                </label>
+                <br><label class="radio-label" for="<%= index %>3">
+                    <input type="radio" onchange="op(this)"  name="<%= index %>" id="<%= index %>3" value="<%= index %>3">
+                    <span></span><%= ques.a3 %>
+                </label>
+                <br><label class="radio-label" for="<%= index %>4">
+                    <input type="radio" onchange="op(this)"  name="<%= index %>" id="<%= index %>4" value="<%= index %>4">
+                    <span></span><%= ques.a4 %>
+                </label>
+                <br>
+            </div><br>
+        <% }) %>
+        <input class="hidden" type="text" name="length" value="<%= quizz.questions.length %>">
+        <br><div class="button">
+            <button type="submit" class="start">Submit</button>
+        </div><br><br><br>
+    </form>
+</div>
+
+<script>
+    function op(radioelement){
+        radioelement.parentElement.parentElement.classList.add('opa')
+    }
+</script>
+

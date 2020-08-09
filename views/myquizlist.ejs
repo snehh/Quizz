@@ -1,0 +1,27 @@
+<%- include ("./partials/menu") %>
+<link rel="stylesheet" href="/css/accountstyles.css">
+
+<div class="buttons">
+    <a href="/createnew"><button>Create New</button></a>
+</div>
+<div class="cont1"><br>
+    <div class="mq"><%= name %> Quizzes</div>
+    
+<% quizlist.forEach(quiz => { %>
+    
+        <div class="quizcard">
+            <a href="/quizzes/<%= quiz._id %>">
+            <span class="titlecard">
+                <%= quiz.title %>
+            </span>
+            </a>
+            <span class="datecard">
+                <span class="co">created on:</span>
+                <span class="qc"><%= quiz.createdOn %></span>
+                <% if(name === 'My'){ %><a href="/quizzes/myquiz/<%= quiz._id %>/edit"><button>edit</button></a> <% } %>
+            </span>
+        </div>
+<% }); %>
+</div>
+
+

@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="playstyles.css">
+<link rel="stylesheet" href="/css/accountstyles.css">
+
+
+<%- include ("./partials/menu") %>
+
+<script>
+    var c1 = `<%= gamecorrect %>`
+    var w1 = `<%= gamewrong %>`
+</script>
+
+<br>
+<div class="gamecon">
+    <div class="game-details">
+        <% if(adq.flag == 1){ %>
+            <div class="title"><a href="/play/<%= adq.topic %>"><%= adq.name %></a></div><div class="res">Results</div>
+            <span class="len">Number of questions: <span class="a"><%= adq.len %></span></span>
+            <span class="diff">Difficulty: <span class="a"><%= adq.diff %></span></span>
+        <% } %>
+        <% if(usq.flag == 1){ %>
+            <div class="title"><%= usq.quiz.title %></div><div class="res">Results</div>
+            <div class="tagsdiv">
+                Tags:
+                <% usq.quiz.tags.forEach(tag => { %>
+                    <span class="tagspan"><%= tag %></span>
+                <% }) %>
+            </div>
+            <span class="len">Created By: <span class="a"><a href="/user/view/<%= usq.quiz.createdBy %>"><%= usq.quiz.createdBy %></a></span></span>
+            <span class="diff">Created On: <span class="a"><%= usq.quiz.createdOn %></span></span>
+        <% } %>
+
+    </div><br>
+    <div class="rest">
+        <canvas class="percent perc1"></canvas>
+            
+        <div class="result-container">
+            <ul>You got
+                <li><%= gamecorrect %><span> correct</span></li>
+                <li><%= gamewrong %><span> wrong</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<script src="/script/canvas.js"></script>
+

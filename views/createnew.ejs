@@ -1,0 +1,47 @@
+<%- include('./partials/menu') %>
+
+<link rel="stylesheet" href="/css/createstyles.css">
+
+<div class="create-container">
+    <form action="/createnew" method="POST">
+        <div class="row">
+            <div class="col-25">
+                <label for="title">Title</label>
+            </div>
+            <div class="col-75">
+                <input required type="text" id="title" name="title" placeholder="Title">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-25">
+                <label for="tags">Tags</label>
+            </div>
+            <div class="col-75">
+                <input required="true" type="text" id="tag" name="tag" placeholder="Input tags separated by space">
+            </div>
+        </div>
+     
+        <div class="row">
+            <div class="col-25">
+            </div>
+            <div class="col-75">
+                <div class="tags-container" id="tags-container">
+                    
+                </div>
+            </div>
+        </div>
+
+        <input class="hidden" type="text" id="tags" name="tags">
+
+        <div class="ques-container" id="ques-container">
+            
+        </div>
+
+        <div class="add" id="add">+ Add question</div><div class="add" id="remove">- Remove last</div>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<script src="/script/createformscript.js"></script>

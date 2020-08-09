@@ -1,0 +1,38 @@
+<%- include ("./partials/menu") %>
+
+<link rel="stylesheet" href="/css/playstyles.css">
+
+<div class="control_container">
+    <div class="control_main">
+        <h1>Game Controls</h1>
+        <form action="/play/<%= topic %>" method="POST">
+            <p>Difficulty:</p>
+                <label class="radio-label" for="easy">
+                    <input required type="radio" checked="checked" name="diff" id="easy" value="easy">
+                    <span></span>Easy
+                </label>
+                <label class="radio-label" for="hard">
+                    <input required type="radio" name="diff" id="hard" value="hard">
+                    <span></span>Hard
+                </label>
+            <br><p id="mod">Number of questions:</p>
+            <input id="slider" class="slider" type="range" name="len" id="len" min="3" max="10" value="5">
+            <br><br><div class="button">
+                <button type="submit" class="start">Start</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    var slider = document.getElementById("slider");
+    var output = document.getElementById("mod");
+    output.innerHTML = "Number of questions: 0" + slider.value;
+
+    slider.oninput = function() {
+        if(this.value < 10)
+            output.innerHTML = "Number of questions: 0" + this.value;
+        else
+        output.innerHTML = "Number of questions: " + this.value;
+    }
+</script>

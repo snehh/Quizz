@@ -1,0 +1,163 @@
+.create-container {
+border-radius: 5px;
+margin: 10px 60px;
+box-shadow: 0 14px 28px rgba(76, 72, 77, 0.25), 0 10px 10px rgba(76, 72, 77, 0.22);
+background-color: #111414;
+text-align: center;
+padding: 20px;
+}
+
+input{
+    background-color: #202124c9;
+    padding: 12px;
+	border: none;
+    border-radius: 4px;
+    color: #68da23;
+    width: 70%;
+}
+
+input.answer{
+    margin-top: 3px;
+    margin-left: 5%;
+    width: 65%;
+}
+
+input.question{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+  
+input:focus {
+    outline: none;
+}
+  
+label {
+padding: 12px 12px 12px 0;
+display: inline-block;
+}
+
+.col-25 {
+float: left;
+width: 25%;
+margin-top: 6px;
+text-align: right;
+}
+
+.col-75 {
+float: left;
+width: 75%;
+margin-top: 6px;
+text-align: left;
+}
+
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+button {
+    border-radius: 30px;
+    border: none;
+	background-color: #68da23;
+	color: #111414;
+	font-size: 12px;
+	font-weight: bolder;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    cursor: pointer;
+}
+
+div.add{
+    font-size: 12px;
+	font-weight: bold;
+    letter-spacing: 1px;
+	text-transform: uppercase;
+    background: transparent;
+    color: #818a8ac5;
+    cursor: pointer;
+    margin-top: 10px;
+    display: inline-block;
+    margin: 0px 10px;
+}
+
+div.add.disable{
+    cursor: default;
+    opacity: 30%;
+}
+
+.hidden{
+    display: none;
+}
+
+.tag{
+    display: inline-block;
+    background-color: #818a8a0c;
+    color: #818a8aa8;
+    padding: 3px 5px 1px 5px;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    font-size: 15px;
+    margin: 0px 3px;
+    cursor: pointer;
+}
+
+label.ans{
+    padding-top: 10px;
+}
+
+.ansdiv{
+    margin-top: 0px;
+}
+
+.ansoption{
+    margin-top: 10px;
+}
+input[type="radio"]{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.ansoption span.check{
+    cursor: pointer;
+    display: inline-block;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    border: solid 2px #1D1E20;
+    background-color: #1D1E20;
+}
+.cont:hover input ~ .check {
+    background-color: #222325;
+}
+
+.cont input:checked ~ .check { 
+    transition: background-color 800ms ease-in;
+    background-color: #68da23;
+}
+
+.cont{
+    padding: 0%;
+    margin-top: 1px;
+}
+
+.check{
+    margin-left: 10px;
+    margin-top: 2px;
+}
+
+.txt{
+    margin-left: 2px;
+    margin-bottom: 2px;
+    color: #818a8a7a;
+}
+
+.cont input:checked ~ .txt { 
+    font-weight: bold;
+    color: #68da23;
+}

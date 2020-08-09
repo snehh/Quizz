@@ -1,0 +1,32 @@
+<%- include("./partials/menu") %>
+<link rel="stylesheet" href="/css/accountstyles.css">
+
+
+<script>
+    var c1 = `<%= user.correct%>`
+    var w1 = `<%= user.wrong%>`
+</script>
+
+<div class="viewcontainer">
+    <div class="playerstats p1">
+        <hr class="play line"><div class="head">User</div><br>
+        <div class="details">
+            <p class="f"><span>Name: </span><%= user.name %></p><br>
+            <p><span>Username: </span><%= user.username %></p><br>
+            <p><span>Joined On: </span><%= user.date %></p><br>
+        </div>
+    </div>
+    <div class="playerstats p1">
+        <hr class="stats line"><div class="head">Stats</div><br>
+        <div class="details myview">
+            <canvas class="percent"></canvas>
+            <p  class="f"></p>
+            <p><span>Correct: </span><%= user.correct %></p><br>
+            <p><span>Wrong: </span><%= user.wrong %></p><br>
+            <p><span>Score: </span><%- (user.correct + user.wrong !== 0)?(user.correct*100/(user.correct + user.wrong)).toFixed(2):(user.correct + user.wrong)  %> %</p><br>
+            <p><span>Quizzes created: </span><%= user.quizno %></p><br>
+        </div>   
+    </div>
+</div>
+
+<script src="/script/canvas.js"></script>

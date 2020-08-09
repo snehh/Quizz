@@ -1,0 +1,319 @@
+@media screen and (max-width: 1200px){
+    .rest{
+        width: 700px;
+    }
+    .perc1{
+        margin-left: 350px;
+    }
+}
+@media screen and (max-width: 1100px){
+    .perc1{
+        margin-left: 250px;
+    }
+}
+
+@media screen and (max-width: 1050px){
+    .quizcard{
+        width: 800px
+    }
+    .user-container{
+        width: 700px;
+    }
+}
+
+
+@media screen and (max-width: 1000px){
+    .perc1{
+        margin-left: 220px;
+    }
+    div.category{
+        width: 310px;
+        padding-right: 20px;
+        text-align: left;
+    }
+    span.imgtitle{
+        text-align: right;
+    }
+    div.img{
+        display: inline-block;
+        margin-left: 30px;
+    }
+    .cont11{
+        text-align: center;
+    }
+    .game-details{
+        width: 700px;
+    }
+    .browse-main{
+        width: 100%;
+    }
+    div.playercard{
+        width: 700px
+    }
+    .resdisp{
+        width: 650px;
+    }
+    .searchfor{
+        margin-right: 0px;
+        margin-left: 30px;
+        text-align: left;
+    }
+    .playerstats{
+        width: 700px;
+    }
+    .p1 hr{
+        width: 640px;
+    }
+}
+
+@media screen and (max-width: 900px){
+    div.category{
+        width: 250px;
+    }
+    span.imgtitle{
+        text-align: right;
+        font-size: 20px;
+    }
+    .quizcard{
+        width: 700px
+    }
+    .rest{
+        width: 600px;
+    }
+}
+@media screen and (max-width: 800px){
+    .perc1{
+        margin-left: 190px;
+    }
+    .rest{
+        width: 570px;
+    }
+    .quizcard{
+        width: 600px;
+    }
+    div.playercard{
+        width: 600px
+    }
+    div.tagsdiv{
+        margin-left: 30px;
+    }
+    span.cb, span.len{
+        margin-left: 20px;
+    }
+    div.game-main{
+        width: 500px
+    }
+    .game-details{
+        width: 600px;
+    }
+    .playerstats{
+        width: 500px;
+    }
+    .p1 hr{
+        width: 440px;
+    }
+    .logincont{
+        width: 500px
+    }
+    .user-container{
+        width: 600px;
+    }
+}
+@media screen and (max-width: 700px){
+    .perc1{
+        margin-left: 150px;
+    }
+    .rest{
+        width: 530px;
+    }
+    .quizcard{
+        width: 500px;
+        text-align: center;
+    }
+    .quizcard span{
+        display: block;
+    }
+    .datecard{
+        float: none;
+    }
+    .quizcard button{
+        margin: 0px;
+        margin-top: 5px;
+    }
+    div.playercard{
+        width: 500px
+    }
+    .resdisp{
+        width: 500px
+    }
+    .user-container{
+        width: 500px;
+    }
+}
+@media screen and (max-width: 650px){
+    .perc1{
+        margin-left: 110px;
+    }
+    .rest{
+        width: 490px;
+    }
+    .game-details{
+        width: 500px;
+    }
+    div.category{
+        text-align: center;
+        width: 150px;
+    }
+    span.imgtitle{
+        display: block;
+        text-align: center;
+        width: 170px;
+    }
+    .control_main{
+        width: 400px;
+    }
+    span.cb, span.len{
+        display: block;
+        float: none;
+    }
+    span.co, span.diff{
+        margin-left: 20px;
+        float: none;
+    }
+}
+@media screen and (max-width: 600px){
+    .user-container{
+        width: 400px;
+    }
+    .perc1{
+        margin-left: 70px;
+    }
+    .rest{
+        width: 400px;
+    }
+    .quizcard{
+        width: 400px
+    }
+    div.playercard{
+        width: 400px
+    }
+    div.game-main{
+        width: 400px
+    }
+    .game-details{
+        width: 350px;
+    }
+    .resco{
+        display: none
+    }
+    .resdisp{
+        width: 400px;
+    }
+    .playerstats{
+        width: 400px;
+    }
+    .p1 hr{
+        width: 340px;
+    }
+    .playerstats span{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 550px){
+    .menu-container span{
+        display: block;
+        border: none;
+    }
+    .menu-container a{
+        display: inline-block;
+        padding: 0 5px;
+        min-width:100px;
+        border-bottom: 1.2px #5caa2bad solid;
+    }
+    .logincont{
+        width: 400px
+    }
+    .logincont button.mt{
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+    .logincont form{
+        padding: 0 30px;
+    }
+}
+@media screen and (max-width: 500px){
+    .user-container{
+        width: 300px;
+    }
+    .user-container .details-container{
+        margin: 0;
+    }
+    .search-cont input[type="text"]{
+        width: 200px;
+    }
+    .perc1{
+        margin-left: 50px;
+    }
+    .quizcard{
+        width: 300px
+    }
+    div.game-main{
+        width: 300px
+    }
+    .control_main{
+        width: 300px;
+        text-align: center;
+    }
+    div.playercard{
+        width: 300px
+    }
+    p#mod{
+        margin-right: 10px;
+    }
+    .control_main input[type="range"]{
+        margin-left: 2px;
+        display: inline-block;
+    }
+    .playerstats{
+        width: 300px;
+    }
+    .p1 hr{
+        width: 240px;
+    }
+    .playerstats p{
+        font-size: 15px;
+    }
+    .p1 .myview{
+        text-align: center;
+    }
+    .p1 canvas{
+        margin-right: 20px;
+    }
+    .chat-sidebar{
+        padding: 20px 0;
+    }
+    .chat-sidebar h3{
+        margin-left: 20px;
+    }
+}
+@media screen and (max-width: 450px){
+    .perc1{
+        margin-left: 0;
+    }
+    .rest{
+        width: 350px;
+    }
+    .resdisp{
+        width: 300px;
+    }
+    .search-cont input[type="text"]{
+        width: 150px;
+    }
+
+}
+@media screen and (max-width: 400px){
+    .control_main{
+        padding: 20px 10px;
+    }
+}
+

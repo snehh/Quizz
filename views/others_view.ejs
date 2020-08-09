@@ -1,0 +1,43 @@
+<%- include ("./partials/menu") %>
+<link rel="stylesheet" href="/css/accountstyles.css">
+
+<style>
+    .details a{
+        color: #d8e0e0;
+    }
+</style>
+
+<script>
+    var c1 = `<%= user.correct%>`
+    var w1 = `<%= user.wrong%>`
+</script>
+
+<div class="account-body">
+    <div class="user-container">
+        <h3><%= user.name%></h3>
+        <span>@<%= user.username%></span>
+        <div class="details-container">
+            <div>
+                <p class="joined">Joined</p><%= user.date %>
+            </div>
+            <p class="details"><a href="/user/<%= user.username %>/quizzes"><%= user.quizno %> quizzes</a></p>
+        </div>
+    </div>
+    <br>
+</div>
+<div class="viewcontainer">
+    <div class="playerstats p1">
+        <hr class="stats line"><div class="head">Stats</div><br>
+        <div class="details otherview">
+            <canvas class="percent"></canvas>
+            <p  class="f"></p>
+            <p><span>Correct: </span><%= user.correct %></p><br>
+            <p><span>Wrong: </span><%= user.wrong %></p><br>
+            <p><span>Score: </span><%- (user.correct + user.wrong !== 0)?(user.correct*100/(user.correct + user.wrong)).toFixed(2):(user.correct + user.wrong)  %> %</p><br>
+            <p><span>Quizzes created: </span><%= user.quizno %></p><br>
+            
+        </div> 
+    </div>
+</div>
+
+<script src="/script/canvas.js"></script>

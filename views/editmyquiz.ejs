@@ -1,0 +1,46 @@
+<%- include('./partials/menu') %>
+
+<link rel="stylesheet" href="/css/createstyles.css">
+
+<div class="create-container">
+    <form action="/createnew/<%= quiz._id %>/edit" method="POST">
+        <div class="row">
+            <div class="col-25">
+                <label for="title">Title</label>
+            </div>
+            <div class="col-75">
+                <input required type="text" id="title" name="title" placeholder="Title" value="<%= quiz.title %>">
+            </div>
+        </div>
+
+        <div class="ques-container" id="ques-container">
+            
+        </div>
+
+        <div class="add" id="add">+ Add question</div><div class="add" id="remove">- Remove last</div>
+        <br><br>
+        <button type="submit">Save</button>
+    </form>
+</div>
+
+<script>
+    var startinglen = parseInt("<%= quiz.questions.length %>");
+    var qarray = [];
+</script>
+
+<% quiz.questions.forEach(question => { %>
+    <script>
+        var questionobject = {
+            "q": "<%= question.q %>",
+            "a1": "<%= question.a1 %>",
+            "a2": "<%= question.a2 %>",
+            "a3": "<%= question.a3 %>",
+            "a4": "<%= question.a4 %>",
+            "correct": "<%= question.correct %>"
+        }
+        
+        qarray.push(questionobject)
+    </script>
+<% }) %>
+
+<script src="/script/editformscript.js"></script>

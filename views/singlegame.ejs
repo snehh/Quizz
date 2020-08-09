@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="/css/playstyles.css">
+
+<h1 class="separator">Quizz™</h1>
+<div class="gamecont">
+    <form action="/play/<%= topic %>/results" method="POST">
+        <% questionArray.forEach(ques => { %>
+            <div class="game-main">
+                <p><%= ques.q %></p>
+                <br><label class="radio-label" for="<%= ques.n %>1">
+                    <input type="radio" onchange="op(this)" name="<%= ques.n %>" id="<%= ques.n %>1" value="<%= ques.n %>1">
+                    <span></span><%= ques.a[0] %>
+                </label>
+                <br><label class="radio-label" for="<%= ques.n %>2">
+                    <input type="radio" onchange="op(this)"  name="<%= ques.n %>" id="<%= ques.n %>2" value="<%= ques.n %>2">
+                    <span></span><%= ques.a[1] %>
+                </label>
+                <br><label class="radio-label" for="<%= ques.n %>3">
+                    <input type="radio" onchange="op(this)"  name="<%= ques.n %>" id="<%= ques.n %>3" value="<%= ques.n %>3">
+                    <span></span><%= ques.a[2] %>
+                </label>
+                <br><label class="radio-label" for="<%= ques.n %>4">
+                    <input type="radio" onchange="op(this)"  name="<%= ques.n %>" id="<%= ques.n %>4" value="<%= ques.n %>4">
+                    <span></span><%= ques.a[3] %>
+                </label>
+                <br>
+            </div><br>
+        <% }) %>
+        <input type="text" value="<%= topic %>" name="topic" id="topic" class="inv">
+        <input type="text" value="<%= diff %>" name="diff" id="diff" class="inv">
+        <input type="text" value="<%= len %>" name="len" id="len" class="inv">
+        <input type="text" value="<%= name %>" name="name" id="name" class="inv">
+        
+        <br><div class="button">
+            <button type="submit" class="start">Submit</button>
+        </div><br><br><br>
+    </form>
+</div>
+
+<script>
+    function op(radioelement){
+        radioelement.parentElement.parentElement.classList.add('opa')
+    }
+</script>

@@ -1,0 +1,41 @@
+<%- include ("./partials/menu") %>
+<link rel="stylesheet" href="/css/playstyles.css">
+
+
+<div class="cont1">
+    <div class="playercard">
+        <div class="title"><%= quiz.title %></div>
+        <div class="tagsdiv">
+            Tags:
+            <% quiz.tags.forEach(tag => { %>
+                <span class="tagspan"><a href="/tag/<%= tag %>"><%= tag %></a></span>
+            <% }) %>
+        </div>
+        <span class="cb"><span class="col">Created On:</span><%= quiz.createdOn %></span>
+</div>
+
+<div class="buttons">
+    <a href="/quizzes/myquiz/<%= quiz._id %>/edit"><button>Edit quiz</button></a>
+    <a href="/quizzes/myquiz/<%= quiz._id %>/delete"><button>Delete quiz</button></a>
+</div>
+
+    <div class="gamecont">
+            <% quiz.questions.forEach((ques, index) => { %>
+                <div class="game-main">
+                    <p class="Aaa"><%= index+1 %>. <%= ques.q %></p>
+                    <div class="ans-div "><br>1)  <%= ques.a1 %></div>
+                    <div class="ans-div "><br>2)  <%= ques.a2 %></div>
+                    <div class="ans-div "><br>3)  <%= ques.a3 %></div>
+                    <div class="ans-div "><br>4)  <%= ques.a4 %></div>
+                    <p class="bbb">Answer: (<%= ques.correct %>)</p>
+                </div><br>
+            <% }) %>
+            
+    </div>
+</div>
+
+<style>
+    .buttons a button{
+        cursor: pointer;
+    }
+</style>

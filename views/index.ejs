@@ -1,0 +1,43 @@
+
+<link rel="stylesheet" href="/css/sliderstyle.css">
+    
+<div class="container logincont" id="container">
+	<div class="form-container sign-up-container">
+		<form action="/register" method="POST">
+            <h1>Create Account</h1>
+			<br>
+			<h6><%= errreg %></h6>
+			<input required type="text" id="name" name="name" placeholder="Name" value="<%= name %>">
+			<input required type="text" id="username" name="username" placeholder="Username" value="<%= usernamereg %>">
+			<input required type="password" id="password" name="password" placeholder="Password">
+			<input required type="password" id="password2" name="password2" placeholder="Confirm Password"><br>
+			<button class="mt">Sign Up</button><br>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="/login" method="POST">
+            <h1>Sign in</h1>
+			<br>
+			<h6><%= errlog %></h6>
+			<input required type="text" id="username1" name="username" placeholder="Username" value="<%= usernamelog %>">
+			<input required type="password" name="password" placeholder="Password" ><br>
+			<button class="mt">Sign In</button><br>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Already have an account?</h1>
+				<p>Login with your details</p>
+				<button class="ghost" id="signIn">Sign In</button><br>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Do not have an account?</h1>
+				<p>Create an account today</p>
+				<button class="ghost" id="signUp">Sign Up</button><br>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="/script/sliderscript.js"></script>

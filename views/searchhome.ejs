@@ -1,0 +1,63 @@
+<%- include('./partials/menu') %>
+
+<!-- <% %> -->
+
+<div class="search-cont">
+    <form method="GET">
+        <select name="type">
+            <option value="tags" selected>Tags</option>
+            <option value="quiz">Quiz</option>
+            <option value="user">User</option>
+        </select>
+        <input type="text" name="search" placeholder="Search for tags, quizzes or users">
+        <input type="submit" value="Search">
+    </form>
+</div>
+
+<div class="cont3">
+<% if(check.tags === 1){ %>
+    <% allTags.forEach(tag => { %>
+        <div class="resdisp tagres">
+            <a href="/tag/<%= tag.tagname %>"><%= tag.tagname %></a>
+        </div>
+    <% }) %>
+    <% if(allTags.length === 0){ %>
+        <div class="nores">No Results Found</div>
+    <% } %>
+<% } %>
+
+<% if(check.user === 1){ %>
+    <% allUser.forEach(user => { %>
+        <div class="resdisp userres">
+            <span class="qt"><a href="/user/<%= user.username %>">@<%= user.username %></a></span>
+            <span class="rescb"><%= user.name %></span>
+            <span class="resco"><a href="/user/<%= user.username %>/quizzes"><%= user.quizno %> quizzes</a></span>
+        </div>
+    <% }) %>
+    <% if(allUser.length === 0){ %>
+        <div class="nores">No Results Found</div>
+    <% } %>
+<% } %>
+
+<% if(check.quiz === 1){ %>
+    <div class="searchfor">Results for Quiz: <span><%= searchedFor %></span></div> 
+    <% allQuiz.forEach(quiz => { %>
+        <div class="resdisp quizres">
+            <span class="qt"><a href="/quizzes/<%= quiz._id %>"><%= quiz.title %></a></span>
+            <span class="rescb">by <a href="/user/<%= quiz.createdBy %>"><%= quiz.createdBy %></a></span>
+            <span class="resco"><%= quiz.createdOn %></span>
+        </div>
+    <% }) %>
+    <% if(allQuiz.length === 0){ %>
+        <div class="nores">No Results Found</div>
+    <% } %>
+<% } %>
+</div>
+
+
+<style>
+    ::placeholder{
+        color: #818a8a9a
+    }
+</style>
+

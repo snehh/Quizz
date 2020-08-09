@@ -1,0 +1,25 @@
+<%- include("./partials/menu") %>
+
+<div class="search-cont">
+    <form method="GET" action="/search">
+        <input type="text" name="type" value="tags" class="inv">
+        <input type="text" name="search" placeholder="Search for tags">
+        <input type="submit" value="Search">
+    </form>
+</div>
+
+<div class="cont3">
+<% if(check == 1){ %>
+    <div class="taglist">Tag: <span><%= tag %></span></div> 
+    <% quizarray.forEach((quiz, index) => { %>
+        <div class="resdisp quizres">
+            <span class="qt"><a href="/quizzes/<%= quiz._id %>"><%= quiz.title %></a></span>
+            <span class="rescb">by <a href="/user/<%= quiz.createdBy %>"><%= quiz.createdBy %></a></span>
+            <span class="resco"><%= quiz.createdOn %></span>
+        </div>
+    <% }) %>
+<% } %>
+<% if(check == 0){ %>
+    <div class="nores">No quiz found with the tag <%= tag %></div>
+<% } %>
+</div>

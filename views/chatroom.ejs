@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="/css/styles.css">
+
+<%- include ("./partials/menu") %>
+
+<script>
+    var user = "<%= name %>";
+</script>
+
+<div class="chat-container">
+    <main class="chat-main">
+      <div class="chat-sidebar">
+        <h3>In Room:</h3>
+        <ul id="users">
+          
+        </ul>
+      </div>
+      <div class="chat-messages" id="chat-messages">
+					
+      </div>
+    </main>
+    <div class="chat-form-container">
+      <form id="chat-form" >
+        <input
+          id="message"
+          type="text"
+          placeholder="Enter Message"
+          required
+          autocomplete="off"
+        />
+        <button class="btn">Send</button>
+      </form>
+    </div>
+</div>
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/script/chatscript.js"></script>

@@ -1,0 +1,414 @@
+@font-face{
+    font-family: 'Didact';
+    src: url('../fonts/DidactGothic-Regular.ttf');
+    font-style: normal;
+    font-weight: 100;
+}
+
+.logincont{
+    height: 300px;
+}
+
+body{
+    user-select: none;
+    background: #111414;
+    color: #68da23;
+	font-family: 'Didact';
+}
+
+button{
+    font-family: 'Didact';
+}
+
+h1{
+    font-family: 'Didact';
+    text-align: center;
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+    color: #818a8a
+}
+
+hr{
+    border: 0px;
+    background: radial-gradient(#818a8a 15%, #111414 70%);
+    height: 2px;
+    margin-top: 10px;
+}
+
+.header{
+    display: inline-block;
+}
+
+button:focus {
+	outline: none;
+}
+
+.buttons{
+    text-align: center;
+}
+
+.buttons button{
+    border-radius: 20px;
+    border: none;
+	background-color: #52575723;
+	color: #68da23;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    
+    width: 200px;
+    margin: 20px 5px 0 5px;
+}
+
+.buttons a{
+    color: #68da23
+}
+
+button:active {
+	transform: scale(0.95);
+}
+
+.menu-container{
+    text-align: center;
+}
+
+.menu-container span{
+    font-family: 'Didact';
+    font-weight: 100;
+    font-size: 20px;
+    display: inline-block;
+    min-width: 18%;
+    border-left: 1.2px #5caa2b solid;
+
+}
+
+.menu-container span:hover a{
+    color: #68da23;
+}
+
+span.menu-first{
+    border: 0px;
+}
+
+.chat-container {
+	max-width: 1100px;
+	background: #818a8a07;
+	margin: 30px auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 14px 28px rgba(76, 72, 77, 0.25), 
+			0 10px 10px rgba(76, 72, 77, 0.22);
+}
+
+.chat-main {
+	display: grid;
+    grid-template-columns: 1fr 3fr;
+    height: 360px;
+}
+
+.chat-sidebar {
+	color: #68da23;
+    padding: 20px 20px 60px;
+	overflow-y: scroll;
+}
+
+.chat-sidebar h3 {
+    color: #a3afaf;
+    margin-bottom: 15px;
+}
+
+.chat-sidebar ul{
+    list-style-type: none;
+}
+
+.chat-sidebar ul li a{
+    padding: 10px 0;
+    color: #68da23;
+}
+
+.chat-messages {
+	padding: 30px;
+	max-height: 350px;
+	overflow-y: scroll;
+}
+
+.chat-messages .message {
+	padding: 5px 10px;
+	margin-bottom: 15px;
+	background-color: #818a8a10;
+    border-radius: 5px;
+}
+
+.chat-messages .notification{
+    text-align: center;
+    color: #69da23e8;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+
+.chat-messages .message .meta {
+	font-size: 12px;
+    font-weight: bold;
+    color: #a3afaf;
+	margin-bottom: 7px;
+}
+
+.chat-messages .message .text{
+    margin: 10px 0px;
+    color: #69da23a1
+}
+
+.chat-messages .message .meta span {
+    margin-left: 5px;
+    font-size: 10px;
+	color: #777;
+}
+
+.chat-form-container {
+    padding: 20px 30px;
+    border-top: #111414 solid;
+}
+
+.chat-form-container form {
+	display: flex;
+}
+
+.chat-form-container input[type='text'] {
+    color: #68da23;
+    background-color: #818a8a2d;
+    border: none;
+    border-radius: 5px 0px 0px 5px;
+	font-size: 16px;
+    padding: 5px;
+    padding-left: 10px;
+	height: 40px;
+	flex: 1;
+}
+
+.chat-form-container input[type='text']:focus {
+    outline: none 
+}
+
+.btn{
+    background-color: #818a8a2d;
+    font-family: 'Didact';
+    font-weight: bold;
+    color: #68da23;
+    cursor: pointer;
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+    padding: 0px 15px;
+    border-left: #818a8a59 solid 1px;
+}
+.container1{
+    text-align: center;
+    color: #818a8a9f;
+}
+
+.account-body{
+    text-align: center;
+}
+.inv{
+    display: none;
+}
+.user-container{
+    display: inline-block;
+    width: 900px;
+    margin-top: 50px;
+    background-color: #818a8a11;
+    border-radius: 20px;
+    padding: 20px 40px;
+    text-align: left;
+}
+
+.user-container h3{
+    font-size: 30px;
+    margin: 10px 0px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.user-container span{
+    color: #818a8a;
+    margin-left: 5px;
+}
+
+.user-container .details-container{
+    display: inline-block;
+    margin-left: 120px;
+}
+
+.user-container .joined{
+    display: inline-block;
+    margin-right: 5px;
+    color: #818a8ac7;
+}
+
+.user-container div p.details{
+    display: inline-block;
+    margin-left: 20px;
+    color: #d8e0e0;
+}
+
+.user-container div{
+    display: inline-block;
+}
+
+.search-cont{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.search-cont input{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: #202124c9;
+    color: #68da23;;
+}
+.search-cont input[type="text"]{
+    color: #818a8a;
+    width: 300px;
+    background-color: #252527;
+}
+select{
+    font-family: 'Didact';
+    font-weight: 100;
+    color: #68da23;
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+    width:70px;
+    background-color: #202124c9;
+    box-shadow: none;
+}
+option{
+    color: #68da23;
+    background-color: #252527;
+    border: none
+}
+
+ul{
+    text-align: left;
+    display: inline-block;
+    list-style: none;
+}
+
+.right-container{
+    height: 220px;
+    margin-left: 30%;
+    text-align: left;
+    margin-top: 10px;
+}
+
+li{
+    margin-top: 20px;
+}
+
+li::before{
+    content: "\2900";
+    width: 1em;
+      margin-left: -1.5em;
+      margin-right: 5px;
+}
+
+li span{
+    color: #818a8a;
+    font-weight: bold;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.cont3{
+    text-align: center;
+}
+
+.resdisp{
+    display: inline-block;
+    padding: 15px;
+    margin-top: 10px;
+    width: 900px;
+    text-align: left;
+    border-radius: 20px;
+    background-color: #20212462;
+}
+.tagres a{
+    color: #68da23;
+    margin-left: 40px;
+}
+.searchfor{
+    font-size: 20px;
+    margin-right: 750px;
+    margin-top: 20px;
+    font-style: italic;
+    color: #818a8a;
+}
+.taglist{
+    font-size: 20px;
+    margin-top: 20px;
+    font-style: italic;
+    color: #818a8a;
+}
+.searchfor span, .taglist span{
+    color: #68da23;
+}
+.qt, .qt a{
+    font-size: 20px;
+    font-weight: bold;
+    color: #68da23;
+}
+.rescb{
+    margin-left: 10px;
+    font-style: italic;
+    color: #818a8a;
+}
+.rescb a{
+    font-style: italic;
+    color: #818a8a;
+}
+.resco, .resco a{
+    color: #68da23;
+    float: right;
+}
+.nores{
+    margin-top: 20px;
+    color: #818a8a;
+    font-style: italic;
+}
+
+
+
+
+
+::-webkit-scrollbar {
+    width: 3px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #111414;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    border-radius: 1px;
+    background: #818a8a52;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #68da23;
+  }
+
+

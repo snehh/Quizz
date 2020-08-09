@@ -1,0 +1,186 @@
+
+    .cont1{
+        text-align: center;
+    }
+    .quizcard{
+        text-align: left;
+        display: inline-block;
+        border: solid 0.5px #818a8a3a;
+        padding: 10px 30px;
+        width: 950px;
+        border-radius: 20px;
+        margin: 10px;
+    }
+    .titlecard{
+        font-size: 30px;
+        color: #68da23;
+        letter-spacing: 2px;
+    }
+    .datecard{
+        float: right;
+        margin-top: 10px
+    }
+    .co{
+        color: #69da238e;
+        margin-right: 5px;
+    }
+    .quizcard:hover{
+        background-color: #818a8a10;
+        border-color: #111414;
+    }
+    a, a button{
+        cursor: pointer;
+    }
+    .mq{
+        margin-top: 5px;
+        font-size: 20px;
+        font-style: italic;
+        text-transform: uppercase;
+        color: #818a8a80;
+    }
+    .qc{
+        color: #818a8a;
+        font-weight: bold;
+    }
+    button{
+        margin-left: 20px;
+        background-color: #818a8a10;
+        border: none;
+        padding: 7px;
+        border-radius: 10px;
+        color: #818a8a;
+        text-transform: uppercase;
+        font-size: 10px;
+    }
+    button:hover{
+        background-color: #68da23;
+        color: #111414;
+        font-weight: bolder;
+    }
+
+
+    
+    .gamecon{
+        text-align: center;
+    }
+    .game-details{
+        display: inline-block;
+        width:900px;
+        padding: 10px 20px;
+        border: 1px solid #818a8a6e;
+        border-radius: 20px;
+    }
+    .title{
+        text-transform: uppercase;
+        font-size: 20px;
+        letter-spacing: 3px;
+    }
+    .res{
+        font-style: italic;
+        color: #818a8a;
+    }
+    .len{
+        margin-left: 20px;
+        float: left;
+    }
+    .diff{
+        margin-right: 20px;
+        float: right;
+    }
+    span{
+        color: #818a8a;
+        font-weight: 100;
+    }
+    .a{
+        font-weight: bold;
+        color: #69da23c7;
+    }
+    .title a{
+        color: #69da23;
+    }
+    .rest{
+        width: 900px
+    }
+    canvas{
+        margin-left: 500px;
+        float: left;
+    }
+    .otherview canvas, .myview canvas{
+        z-index: 2;
+        float: right;
+        margin-left: 20px;
+        position: relative;
+        top: -20px;
+    }
+    .otherview .f{
+        margin-top: 50px;
+    }
+    .result-container{
+        margin-top: 40px;
+        float: right;
+        text-align: right;
+    }
+    .tagsdiv{  
+        text-align: left;
+        margin: 5px 0px;
+        margin-left: 20px;
+    }
+    .tagspan{
+        background-color: rgba(0, 0, 0, 0.192);
+        color: #818a8a7a;
+        padding: 2px 5px;
+        border-radius: 5px;
+        margin: 0px 2px;
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: bold;
+    }
+    .tagsdiv + span a{
+        color: #69da23c7;
+    }
+
+.viewcontainer{
+    text-align: center;
+}
+
+.playerstats{
+    margin-top: 30px;
+    display: inline-block;
+    border: 1px solid #818a8a;
+    width: 900px;
+    padding: 20px;
+
+    padding-top: 15px;
+    border-radius: 20px;
+    text-align: left;
+}
+.head{
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 10px;
+    float: right;
+}
+hr.line{
+    float: left;
+    background: linear-gradient(to left, #818a8a 15%, #111414 97%);
+}
+hr.stats{
+    width: 850px;
+}
+hr.play{
+    width:850px;
+}
+.details{
+    margin-left: 20px;
+    
+}
+.details span{
+    padding: 10px;
+    /* margin-top: 5px; */
+}
+.viewcontainer p{
+    margin: 0;
+}
+.viewcontainer p.f{
+    margin-top: 20px;
+}
