@@ -56,5 +56,7 @@ app.get('*', (req, res) => {
     res.render('error')
 })
 
-server.listen(5000);
-console.log("Listening to port 5000")
+var PORT = process.env.port || 5000
+
+server.listen(PORT);
+console.log(`Listening to port ${PORT}`)
