@@ -25,30 +25,30 @@ window.onload = () => {
         var div = document.createElement("div");
         div.classList.add("row")
         div.innerHTML = `<div class="col-25">
-                            <label for="q${length+1}">Question ${length+1}</label>
+                            <label for="questionarray[${length}][q]">Question ${length+1}</label>
                         </div>
                         <div class="col-75">
-                            <input type="text" required class="question" id="q${length+1}" name="q${length+1}" placeholder="Question ${length+1}">
-                            <input type="text" required class="answer" id="a${length+1}1" name="a${length+1}1" placeholder="Option 1">
-                            <input type="text" required class="answer" id="a${length+1}2" name="a${length+1}2" placeholder="Option 2">
-                            <input type="text" required class="answer" id="a${length+1}3" name="a${length+1}3" placeholder="Option 3">
-                            <input type="text" required class="answer" id="a${length+1}4" name="a${length+1}4" placeholder="Option 4">
+                            <input type="text" required class="question" id="questionarray[${length}][q]" name="questionarray[${length}][q]" placeholder="Question ${length+1}">
+                            <input type="text" required class="answer" id="questionarray[${length}][a1]" name="questionarray[${length}][a1]" placeholder="Option 1">
+                            <input type="text" required class="answer" id="questionarray[${length}][a2]" name="questionarray[${length}][a2]" placeholder="Option 2">
+                            <input type="text" required class="answer" id="questionarray[${length}][a3]" name="questionarray[${length}][a3]" placeholder="Option 3">
+                            <input type="text" required class="answer" id="questionarray[${length}][a4]" name="questionarray[${length}][a4]" placeholder="Option 4">
                         </div>
                         <div class="col-25 ansdiv">
-                            <label class="ans" for="ans${length+1}">Answer ${length+1}</label>
+                            <label class="ans" for="questionarray[${length}][correct]">Answer ${length+1}</label>
                         </div>
                         <div class="col-75 ansoption">
                             <label class="cont">
-                                <input required type="radio" name="ans${length+1}" id="ans${length+1}" value="1"><span class="check"></span><span class="txt">1</span>
+                                <input required type="radio" name="questionarray[${length}][correct]" id="questionarray[${length}][correct]" value="1"><span class="check"></span><span class="txt">1</span>
                             </label>
                             <label class="cont">
-                                <input required type="radio" name="ans${length+1}" id="ans${length+1}" value="2"><span class="check"></span><span class="txt">2</span>
+                                <input required type="radio" name="questionarray[${length}][correct]" id="questionarray[${length}][correct]" value="2"><span class="check"></span><span class="txt">2</span>
                             </label>
                             <label class="cont">
-                                <input required type="radio" name="ans${length+1}" id="ans${length+1}" value="3"><span class="check"></span><span class="txt">3</span>
+                                <input required type="radio" name="questionarray[${length}][correct]" id="questionarray[${length}][correct]" value="3"><span class="check"></span><span class="txt">3</span>
                             </label>
                             <label class="cont">
-                                <input required type="radio" name="ans${length+1}" id="ans${length+1}" value="4"><span class="check"></span><span class="txt">4</span>
+                                <input required type="radio" name="questionarray[${length}][correct]" id="questionarray[${length}][correct]" value="4"><span class="check"></span><span class="txt">4</span>
                             </label>
                         </div>`
         document.getElementById("ques-container").appendChild(div)
@@ -63,30 +63,30 @@ add_button.addEventListener('click', () => {
         var div = document.createElement("div");
         div.classList.add("row")
         div.innerHTML = `<div class="col-25">
-                            <label for="q${length+1}">Question ${length+1}</label>
+                            <label for="questionarray[${length}][q]">Question ${length+1}</label>
                         </div>
                         <div class="col-75">
-                            <input type="text" required class="question" id="q${length+1}" name="q${length+1}" placeholder="Question ${length+1}">
-                            <input type="text" required class="answer" id="a${length+1}1" name="a${length+1}1" placeholder="Option 1">
-                            <input type="text" required class="answer" id="a${length+1}2" name="a${length+1}2" placeholder="Option 2">
-                            <input type="text" required class="answer" id="a${length+1}3" name="a${length+1}3" placeholder="Option 3">
-                            <input type="text" required class="answer" id="a${length+1}4" name="a${length+1}4" placeholder="Option 4">
+                            <input type="text" required class="question" id="questionarray[${length}][q]" name="questionarray[${length}][q]" placeholder="Question ${length+1}">
+                            <input type="text" required class="answer" id="questionarray[${length}][a1]" name="questionarray[${length}][a1]" placeholder="Option 1">
+                            <input type="text" required class="answer" id="questionarray[${length}][a2]" name="questionarray[${length}][a2]" placeholder="Option 2">
+                            <input type="text" required class="answer" id="questionarray[${length}][a3]" name="questionarray[${length}][a3]" placeholder="Option 3">
+                            <input type="text" required class="answer" id="questionarray[${length}][a4]" name="questionarray[${length}][a4]" placeholder="Option 4">
                         </div>
                         <div class="col-25 ansdiv">
-                            <label class="ans" for="ans${length+1}">Answer ${length+1}</label>
+                            <label class="ans" for="questionarray[${length}][correct]">Answer ${length+1}</label>
                         </div>
                         <div class="col-75 ansoption">
                             <label class="cont">
-                                <input required type="radio" name="ans${length+1}" id="ans${length+1}" value="1"><span class="check"></span><span class="txt">1</span>
+                                <input required type="radio" name="questionarray[${length}][correct]" id="questionarray[${length}][correct]" value="1"><span class="check"></span><span class="txt">1</span>
                             </label>
                             <label class="cont">
-                                <input required type="radio" name="ans${length+1}" id="ans${length+1}" value="2"><span class="check"></span><span class="txt">2</span>
+                                <input required type="radio" name="questionarray[${length}][correct]" id="questionarray[${length}][correct]" value="2"><span class="check"></span><span class="txt">2</span>
                             </label>
                             <label class="cont">
-                                <input required type="radio" name="ans${length+1}" id="ans${length+1}" value="3"><span class="check"></span><span class="txt">3</span>
+                                <input required type="radio" name="questionarray[${length}][correct]" id="questionarray[${length}][correct]" value="3"><span class="check"></span><span class="txt">3</span>
                             </label>
                             <label class="cont">
-                                <input required type="radio" name="ans${length+1}" id="ans${length+1}" value="4"><span class="check"></span><span class="txt">4</span>
+                                <input required type="radio" name="questionarray[${length}][correct]" id="questionarray[${length}][correct]" value="4"><span class="check"></span><span class="txt">4</span>
                             </label>
                         </div>`
         document.getElementById("ques-container").appendChild(div)
