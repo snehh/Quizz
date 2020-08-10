@@ -1,5 +1,7 @@
 # Quizz
 
+App hosted at https://quizz-finalproj.herokuapp.com/
+
 Features
   - chatroom
   - create/edit/delete your own quizzes
