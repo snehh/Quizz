@@ -20,9 +20,7 @@ module.exports.postlogin = (req, res, next) => {
         }
         req.logIn(user, function(err) {
           if (err) { return next(err); }
-          setTimeout(() => {
-            res.redirect(`user/${user.username}`)
-          }, 100)
+          res.redirect(`user/${user.username}`)
         });
     })(req, res, next)
 }

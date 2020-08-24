@@ -1,0 +1,21 @@
+<%- include ("./partials/menu") %>
+
+<link rel="stylesheet" href="/css/playstyles.css">
+
+<div class="control_container">
+    <div class="control_main">
+        <h1 style="margin-bottom: 0;">Rules</h1>
+        <div class="rules-div">
+            <ul style="margin-top: 0;">
+                <li>This is a quiz of <%= length %> questions</li>
+                <li>You can only view the next question if the previous one is answered correctly</li>
+                <li>You have <%= time %> seconds to answer before it is marked wrong</li>
+                <li>Quiz can be attempted only once and the attempt begins on pressing start</li>
+                <li>Switching tabs will result in submission of quiz</li>
+            </ul><br><br>
+            <div class="button">
+                <a href="/live/<%= id %>"><button type="submit" class="start" id="id">Start</button></a>
+            </div>
+        </div>
+    </div>
+</div>

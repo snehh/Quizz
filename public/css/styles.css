@@ -386,6 +386,20 @@ li span{
     color: #818a8a;
     font-style: italic;
 }
+.livediv div.heading{
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+/* .livediv .heading-span{
+    margin-left: 500px;
+} */
+.livediv .nores{
+    margin: 0;
+}
+.livediv hr{
+    opacity: 0.5;
+}
 
 
 

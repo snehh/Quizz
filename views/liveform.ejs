@@ -1,0 +1,26 @@
+<%- include ("./partials/menu") %>
+
+<link rel="stylesheet" href="/css/createstyles.css">
+
+<br><br>
+<div class="cont7">
+    <div class="cont7-2 control-main">
+        <h1>Live Quiz</h1>
+    <form method="POST" action="/createnew/<%= quiz._id %>/liveactive">
+        <label for="title">Title: </label><br><input name="title" id="title" type="text" value="<%= quiz.title %>" disabled><br>
+        <label for="createdBy">Created By: </label><br><input name="createdBy" id="createdBy" type="text" value="<%= quiz.createdBy %>" disabled><br>
+        <label for="timelim">Time limit per question: </label>
+            <select id="timelim" name="timelim">
+                <option name="timelim" value="7">7s</option>
+                <option name="timelim" value="10" selected>10s</option>
+                <option name="timelim" value="15">15s</option>
+                <option name="timelim" value="20">20s</option>
+            </select><br><br>
+            
+        <div class="button">
+            <button type="submit" class="start">Create</button>
+        </div>
+    </form><br><i>*Live will be active for one week</i>
+    </div>
+</div>
+

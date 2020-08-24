@@ -1,13 +1,5 @@
 <%- include("./partials/menu") %>
 
-<div class="search-cont">
-    <form method="GET" action="/search">
-        <input type="text" name="type" value="tags" class="inv">
-        <input type="text" name="search" placeholder="Search for tags">
-        <input type="submit" value="Search">
-    </form>
-</div>
-
 <div class="cont3">
 <% if(check == 1){ %>
     <div class="taglist">Tag: <span><%= tag %></span></div> 

@@ -8,7 +8,12 @@ router.get('/', ensureAuthenticated, (req, res) => {
     if(req.query.search){
         const regex = new RegExp(escapeRegex(req.query.search), 'gi');
         if(req.query.type === 'tags'){
-            res.redirect(`/tag/${req.query.search}`)
+            Tags.find({tagname: regex}, function(err, allTags){
+                if(err) console.log(err)
+                var check = { tags: 1, user: 0, quiz: 0 }
+                res.render('searchhome', {check, allTags: allTags.reverse(), searchedFor: req.query.search })
+            })
+            // res.redirect(`/tag/${req.query.search}`)
         }
         if(req.query.type === 'user'){
             User.find({$or:[{name: regex},{username:regex}]}, function(err, allUser){

@@ -1,0 +1,50 @@
+<%- include ("./partials/menu") %>
+
+<div class="cont3 livediv">
+    <div class="others">
+        <div class="heading">
+            <span class="heading-span">Play</span><hr>
+        </div>
+        <% otherActive.forEach(quiz => { %>
+            <div class="resdisp quizres">
+                <span class="qt"><a href="/live/<%= quiz.quizId %>/rules"><%= quiz.qname %></a></span>
+                <span class="rescb">by <a href="/user/<%= quiz.createdBy %>"><%= quiz.createdBy %></a></span>
+                <span class="resco"><span class="rescb">Ending On: </span><%= quiz.endOn.toDateString() %></span>
+            </div>
+        <% }) %>
+        <% if(otherActive.length === 0){ %>
+            <div class="nores">No Quizzes Live</div>
+        <% } %>
+    </div>
+    <br>
+    <div class="attempted">
+        <div class="heading">
+            <span class="heading-span">Attempted</span><hr>
+        </div>
+        <% attemptedActive.forEach(quiz => { %>
+            <div class="resdisp quizres">
+                <span class="qt"><a href="/live/<%= quiz.quizId %>"><%= quiz.qname %></a></span>
+                <span class="rescb">by <a href="/user/<%= quiz.createdBy %>"><%= quiz.createdBy %></a></span>
+                <span class="resco"><span class="rescb">Ending On: </span><%= quiz.endOn.toDateString() %></span>
+            </div>
+        <% }) %>
+        <% if(attemptedActive.length === 0){ %>
+            <div class="nores">No Quizzes Attempted</div>
+        <% } %>
+    </div>
+    <br>
+    <div class="myquiz">
+        <div class="heading">
+            <span class="heading-span">My Quizzes</span><hr>
+        </div>
+        <% myActive.forEach(quiz => { %>
+            <div class="resdisp quizres">
+                <span class="qt"><a href="/quizzes/<%= quiz.quizId %>"><%= quiz.qname %></a></span>
+                <span class="resco"><span class="rescb">Ending On: </span><%= quiz.endOn.toDateString() %></span>
+            </div>
+        <% }) %>
+        <% if(myActive.length === 0){ %>
+            <div class="nores">No Quizzes Live</div>
+        <% } %>
+    </div>
+</div>

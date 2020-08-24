@@ -161,3 +161,48 @@ input[type="radio"]{
     font-weight: bold;
     color: #68da23;
 }
+
+.cont7{
+    text-align: center;
+}
+
+.cont7-2{
+    display: inline-block;
+    text-align: left;
+    background-color: #818a8a11;
+    border-radius: 20px;
+    width: 500px;
+    padding: 20px 40px;
+}
+
+.cont7 label{
+    font-weight: bold;
+    color: #818a8a;
+}
+
+.cont7 input{
+    background-color: #111414;
+    width: 476px;
+}
+
+.cont7 div.button{
+    margin-top: 10px;
+    text-align: center;
+}
+.cont7 select{
+    width: 100px;
+    background-color: #111414;
+}
+
+.cont7 option{
+    background-color: #111414;
+}
+
+.cont7 h1{
+    margin-top: 0;
+}
+
+.cont7 i{
+    color: #818a8ad2;
+    float: right;
+}

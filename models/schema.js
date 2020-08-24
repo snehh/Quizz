@@ -80,14 +80,33 @@ const TagsSchema = new mongoose.Schema({
     tagname: String
 })
 
+const LiveSchema = new mongoose.Schema({
+    qname: String,
+    quizId: String,
+    qtime: String,
+    qlength: String,
+    createdBy: String,
+    createdAt: Date,
+    endOn: Date,
+
+    attempted: [{
+        username: String,
+        correct: String
+    }],
+}, {timestamps: true})
+
+LiveSchema.index({"createdAt": 1},{expireAfterSeconds: 604800});
+
 const User = mongoose.model('User', UserSchema);
 const AdminQuiz = mongoose.model('AdminQuiz', AdminQuizSchema);
 const UserQuiz = mongoose.model('UserQuiz', UserQuizSchema)
 const Tags = mongoose.model('Tags', TagsSchema)
+const LiveActive = mongoose.model('LiveActive', LiveSchema)
 
 module.exports = {
     User,
     AdminQuiz,
     UserQuiz,
-    Tags
+    Tags,
+    LiveActive
 }

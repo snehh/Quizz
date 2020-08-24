@@ -295,6 +295,9 @@
     .chat-sidebar h3{
         margin-left: 20px;
     }
+    .create-container{
+        margin: 10px;
+    }
 }
 @media screen and (max-width: 450px){
     .perc1{
@@ -314,6 +317,46 @@
 @media screen and (max-width: 400px){
     .control_main{
         padding: 20px 10px;
+    }
+    .create-container{
+        padding: 10px;
+    }
+    .create-container .col-25{
+        width: 30%
+    }
+    .create-container .col-75{
+        width: 70%
+    }
+    .chat-sidebar{
+        display: none;
+    }
+    .chat-main{
+        grid-template-columns: none;
+    }
+    .quizcard{
+        width: 250px;
+        padding: 10px;
+    }
+    .p1{
+        width: 280px;
+    }
+    .user-container{
+        width: 220px
+    }
+    .user-container div p.details{
+        margin-left: 0;
+    }
+    .result-container{
+        float: left;
+    }
+    .game-details{
+        width: 250px;
+    }
+    .p1 .stats.line{
+        width: 220px;
+    }
+    .chat-messages{
+        max-width: 1100;
     }
 }
 

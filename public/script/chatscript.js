@@ -35,7 +35,7 @@ function activeUser(userarray) {
 
     while (userlist.hasChildNodes()) {  
         userlist.removeChild(userlist.firstChild);
-      }
+    }
 
     for(var i=0; i<userarray.length; i++) {
         const li = document.createElement('li')

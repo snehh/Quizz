@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const passport = require('passport');
 const expressLayouts = require('express-ejs-layouts');
 const socketio = require('socket.io');
-const { timeStamp } = require('console');
+// const { timeStamp } = require('console');
 
 const app = express();
 const server = http.createServer(app)
@@ -48,6 +48,7 @@ app.use('/play', require('./routes/browse'))
 app.use('/createnew', require('./routes/createnew'))
 app.use('/quizzes', require('./routes/play.js'))
 app.use('/search', require('./routes/search.js'))
+app.use('/live', require('./routes/live'))
 app.use('/tag', require('./routes/tags.js') )
 
 const AdminQuiz = require('./models/schema.js').AdminQuiz
@@ -57,6 +58,7 @@ app.get('*', (req, res) => {
 })
 
 
-server.listen(process.env.PORT || 3000, () => {
-    console.log(`Server started`)
+var port = process.env.PORT || 3000
+server.listen(port, () => {
+    console.log(`Server started on port ${port}`)
 });

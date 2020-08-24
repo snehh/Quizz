@@ -294,3 +294,16 @@ p.bbb{
     font-style: normal;
     margin-left: 40px;
 }
+
+.rules-div li{
+    color: #818a8a;
+}
+.rules-div li::before{
+    color: #68da23;
+}
+.rules-div button{
+    color: #111414;
+    background-color: #68da23;
+    border: none;
+    font-weight: bolder;
+}

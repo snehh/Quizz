@@ -46,7 +46,7 @@
         <% }) %>
         <input class="hidden" type="text" name="length" value="<%= quizz.questions.length %>">
         <br><div class="button">
-            <button type="submit" class="start">Submit</button>
+            <button type="submit" class="start" id="id">Submit</button>
         </div><br><br><br>
     </form>
 </div>
@@ -55,5 +55,12 @@
     function op(radioelement){
         radioelement.parentElement.parentElement.classList.add('opa')
     }
+    document.addEventListener('visibilitychange', function(){
+        // console.log(document.hidden)
+        if(document.hidden === true){
+            alert('Quiz has been submitted due to switching tabs')
+            document.getElementById('submit').click()
+        }
+    });
 </script>
 

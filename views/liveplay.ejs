@@ -1,0 +1,34 @@
+<link rel="stylesheet" href="/css/playstyles.css">
+<link rel="stylesheet" href="/css/livestyles.css">
+
+<div class="gamecont">
+        <div class="game-main" id="gamemain">
+            
+            
+        </div><br><br>
+        <div id="timer"></div>
+        
+</div>
+
+<script>
+    var len = parseInt('<%= quiz.questions.length %>')
+    var id = '<%= quiz._id %>'
+    var time = parseInt('<%= timelim %>')
+    var ques=[];
+</script>
+
+<% quiz.questions.forEach(question => { %>
+    <script>
+        var q1 = {
+            q: '<%= question.q %>',
+            a1: '<%= question.a1 %>',
+            a2: '<%= question.a2 %>',
+            a3: '<%= question.a3 %>',
+            a4: '<%= question.a4 %>',
+            correct: '<%= question.correct %>'
+        }
+        ques.push(q1)
+    </script>
+<% }) %>
+
+<script src="/script/livescript.js"></script>

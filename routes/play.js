@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const { User, UserQuiz} = require('../models/schema.js');
+const { User, UserQuiz, LiveActive} = require('../models/schema.js');
 const { ensureAuthenticated } = require('../config/auth.js');
 
 router.get('/:gameid', ensureAuthenticated, (req, res) => {
@@ -52,6 +52,29 @@ router.get('/myquiz/:quizid/edit', ensureAuthenticated, (req, res) => {
             }
         })
         .catch(err => console.log(err))
+})
+
+router.get('/myquiz/:quizid/liveactive', ensureAuthenticated, (req, res) => {
+    var user = req.user;
+    LiveActive.findOne({quizId: req.params.quizid})
+        .then(active => {
+            if(active){
+                res.redirect('/live')
+            }else{
+                UserQuiz.findOne({_id: req.params.quizid})
+                .then(quiz => {
+                    if(quiz.createdBy === req.user.username){
+                        res.render('liveform', {quiz})
+                    }
+                    else{
+                        res.redirect(`/quizzes/${quiz._id}`)
+                    }
+                })
+                .catch(err => console.log(err))
+            }
+        })
+
+
 })
 
 router.get('/myquiz/:quizid/delete', ensureAuthenticated, (req, res) => {

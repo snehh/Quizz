@@ -15,9 +15,7 @@ router.get('/', forwardAuthenticated, (req, res) => res.render('index', {
   name: '', usernamereg: '', usernamelog: '', errreg: '', errlog: ''
 }));
 
-router.get('/error', ensureAuthenticated, (req, res) => {
-  res.render('error')
-})
+
 router.get('/register', forwardAuthenticated, (req, res) => res.redirect('/'))
 router.get('/login', forwardAuthenticated, (req, res) => res.redirect('/'))
 router.get('/logout', ensureAuthenticated, (req, res) => {
@@ -27,14 +25,14 @@ router.get('/logout', ensureAuthenticated, (req, res) => {
     })
 })
 
-router.get('/logout', ensureAuthenticated, (req, res) => {
-  router.get('/logout', (req, res) => {
-    req.logout;
-    req.session.destroy(function (err) {
-        res.redirect('login');
-    })
-})
-})
+// router.get('/logout', ensureAuthenticated, (req, res) => {
+//   router.get('/logout', (req, res) => {
+//     req.logout;
+//     req.session.destroy(function (err) {
+//         res.redirect('login');
+//     })
+// })
+// })
 
 
 router.post('/register', userControl.postregister)

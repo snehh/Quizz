@@ -1,0 +1,17 @@
+.gamecont{
+    margin-top: 100px;
+}
+
+.game-main .ans{
+    background-color: #818a8a12;
+    padding: 12px;
+    padding-left: 20px;
+    margin: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.game-main .ans:hover{
+    background-color: #69da239d;
+    color: #111414;
+}
