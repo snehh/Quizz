@@ -1,6 +1,6 @@
 # Quizz
-
-App hosted at https://app-quizz.herokuapp.com/ (best viewed in pc)
+An online quizzing app
+App hosted at https://app-quizz.herokuapp.com/  
 
 Features
   - chatroom
